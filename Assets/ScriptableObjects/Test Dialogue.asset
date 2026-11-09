@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f282dbb6aaf4742bc03c8bcc9b102c, type: 3}
+  m_Name: Test Dialogue
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  entries:
+  - speaker: Hero
+    text: This is a test.
+    portrait: {fileID: -6146700129834819302, guid: 56ccf4e7335a87348a5552661e45f17b, type: 3}
+  - speaker: Goku
+    text: Yo!
+    portrait: {fileID: -6619111317931664985, guid: 1a9bbd86efd5d644f8265fd366567e35, type: 3}
