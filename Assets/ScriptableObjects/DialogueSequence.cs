@@ -18,7 +18,7 @@ public class DialogueEntry
     }
 }
 
-[CreateAssetMenu(menuName = "JRPG/Dialogue Sequence")]
+[CreateAssetMenu(menuName = "Parallax/Dialogue Sequence")]
 public class DialogueSequence : ScriptableObject
 {
     [SerializeField] private DialogueEntry[] entries;

@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
   entries:
   - speaker: Hero
-    text: This is a test.
-    portrait: {fileID: -6146700129834819302, guid: 56ccf4e7335a87348a5552661e45f17b, type: 3}
-  - speaker: Goku
-    text: Yo!
-    portrait: {fileID: -6619111317931664985, guid: 1a9bbd86efd5d644f8265fd366567e35, type: 3}
+    text: SEPHIROTH?!
+    portrait: {fileID: -6146700129834819302, guid: ac125fbc232fc4b43b6c8737b608db35, type: 3}
+  - speaker: Sephiroth
+    text: Show me your strength.
+    portrait: {fileID: 7399712131355799034, guid: f3e719531e1b70a4299a1107a195fe7f, type: 3}
+  - speaker: Sephiroth
+    text: Or return to the planet.
+    portrait: {fileID: 7399712131355799034, guid: f3e719531e1b70a4299a1107a195fe7f, type: 3}

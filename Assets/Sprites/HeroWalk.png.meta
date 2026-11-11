@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e2c01211eda67984a9dabce7fbf95875
+guid: e07467c9a632d574fa8da8f095cc0a2c
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -61,7 +61,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -140,10 +140,10 @@ TextureImporter:
       name: HeroWalk_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 335
-        width: 39
-        height: 49
+        x: 5
+        y: 336
+        width: 37
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,9 +162,9 @@ TextureImporter:
       name: HeroWalk_1
       rect:
         serializedVersion: 2
-        x: 4
-        y: 287
-        width: 40
+        x: 52
+        y: 336
+        width: 39
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -184,10 +184,10 @@ TextureImporter:
       name: HeroWalk_2
       rect:
         serializedVersion: 2
-        x: 51
-        y: 335
-        width: 41
-        height: 49
+        x: 101
+        y: 336
+        width: 38
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,10 +206,10 @@ TextureImporter:
       name: HeroWalk_3
       rect:
         serializedVersion: 2
-        x: 100
-        y: 335
-        width: 40
-        height: 49
+        x: 5
+        y: 287
+        width: 38
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,10 +228,10 @@ TextureImporter:
       name: HeroWalk_4
       rect:
         serializedVersion: 2
-        x: 102
-        y: 287
-        width: 39
-        height: 49
+        x: 103
+        y: 288
+        width: 37
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,10 +250,10 @@ TextureImporter:
       name: HeroWalk_5
       rect:
         serializedVersion: 2
-        x: 3
-        y: 239
-        width: 40
-        height: 48
+        x: 4
+        y: 240
+        width: 38
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,10 +272,10 @@ TextureImporter:
       name: HeroWalk_6
       rect:
         serializedVersion: 2
-        x: 4
-        y: 191
-        width: 39
-        height: 49
+        x: 99
+        y: 239
+        width: 37
+        height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: HeroWalk_7
       rect:
         serializedVersion: 2
-        x: 98
-        y: 239
-        width: 39
-        height: 49
+        x: 5
+        y: 192
+        width: 37
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,10 +316,10 @@ TextureImporter:
       name: HeroWalk_8
       rect:
         serializedVersion: 2
-        x: 100
+        x: 101
         y: 191
-        width: 39
-        height: 49
+        width: 37
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -338,31 +338,9 @@ TextureImporter:
       name: HeroWalk_9
       rect:
         serializedVersion: 2
-        x: 51
-        y: 287
-        width: 41
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a142e5f9549ee740a150f50140d4b79
-      internalID: -1566858023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HeroWalk_10
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 239
-        width: 41
+        x: 53
+        y: 288
+        width: 37
         height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -372,20 +350,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c4ee84a535942f43bee437ddb4a8b60
-      internalID: 2132967452
+      spriteID: e864bed96fe407e4e8a594ddffe79177
+      internalID: -855306999
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroWalk_11
+      name: HeroWalk_10
       rect:
         serializedVersion: 2
-        x: 50
-        y: 190
-        width: 41
-        height: 49
+        x: 51
+        y: 240
+        width: 39
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,8 +372,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d29ba0d96496a5f40a5f06ad1383e588
-      internalID: -507924810
+      spriteID: eadfccda08bcdff42813dc11b59e26cc
+      internalID: -731700873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroWalk_11
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 192
+        width: 39
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55d527c17a50c8468703cb63194aa66
+      internalID: -807971645
       vertices: []
       indices: 
       edges: []
@@ -404,7 +404,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e462c7d8f01a79e4883ab8d9a9fd2b91
+    spriteID: 71ac3127fbbe2a1498938f474e2e7517
     internalID: 0
     vertices: []
     indices: 
@@ -414,12 +414,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":4.0},"gridSpriteSize":{"x":100.0,"y":49.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":15.0,"y":15.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       HeroWalk_0: 3829628789821705471
       HeroWalk_1: -3835972446028879980
-      HeroWalk_10: 2132967452
-      HeroWalk_11: -507924810
+      HeroWalk_10: -731700873
+      HeroWalk_11: -807971645
       HeroWalk_2: -6599464204712131360
       HeroWalk_3: 8893473377638846399
       HeroWalk_4: 7372089203113461926
@@ -427,7 +427,7 @@ TextureImporter:
       HeroWalk_6: -4106152596181388298
       HeroWalk_7: -3663086775266114795
       HeroWalk_8: 1479769870582934789
-      HeroWalk_9: -1566858023
+      HeroWalk_9: -855306999
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
