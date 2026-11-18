@@ -23,24 +23,24 @@ public class DialogueSystem : MonoBehaviour
 	}
 
 	[Header("Optional UI overrides")]
-	[SerializeField] private Canvas canvas;
-	[SerializeField] private Text speakerText;
-	[SerializeField] private Text dialogueText;
-	[SerializeField] private Text advanceArrow;
-	[SerializeField] private float charactersPerSecond = 45f;
+	[SerializeField] Canvas canvas;
+	[SerializeField] Text speakerText;
+	[SerializeField] Text dialogueText;
+	[SerializeField] Text advanceArrow;
+	[SerializeField] float charactersPerSecond = 45f;
 	[Header("Font and portrait")]
-	[SerializeField] private Font dialogueFont;
-	[SerializeField] private Sprite placeholderPortrait;
-	[SerializeField] private Image characterPortrait;
+	[SerializeField] Font dialogueFont;
+	[SerializeField] Sprite placeholderPortrait;
+	[SerializeField] Image characterPortrait;
 
-	private GameObject dialoguePanel;
-	private Text portraitPlaceholderText;
-	private DialogueLine[] activeLines;
-	private int lineIndex;
-	private string fullDialogueLine;
-	private int revealedCharacterCount;
-	private float revealProgress;
-	private bool isShowing;
+	GameObject dialoguePanel;
+	Text portraitPlaceholderText;
+	DialogueLine[] activeLines;
+	int lineIndex;
+	string fullDialogueLine;
+	int revealedCharacterCount;
+	float revealProgress;
+	bool isShowing;
 
 	public bool IsShowing => isShowing;
 
@@ -71,7 +71,7 @@ public class DialogueSystem : MonoBehaviour
 			Advance();
 	}
 
-	/// <summary>Starts a dialogue sequence. Each line is shown in order.</summary>
+	///Starts a dialogue sequence. Each line is shown in order.
 	public void StartDialogue(DialogueLine[] lines)
 	{
 		if (lines == null || lines.Length == 0)
@@ -85,7 +85,7 @@ public class DialogueSystem : MonoBehaviour
 		ShowCurrentLine();
 	}
 
-	/// <summary>Displays the next line, or closes the dialogue after the last line.</summary>
+	///Displays the next line, or closes the dialogue after the last line.
 	public void Advance()
 	{
 		if (!isShowing)

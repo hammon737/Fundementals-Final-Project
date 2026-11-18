@@ -4,12 +4,12 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Collider2D))]
 public class NPCDialogue : MonoBehaviour
 {
-    [SerializeField] private DialogueSystem dialogueSystem;
-    [SerializeField] private DialogueSequence dialogueSequence;
-    [SerializeField] private string playerTag = "Player";
+    [SerializeField] DialogueSystem dialogueSystem;
+    [SerializeField] DialogueSequence dialogueSequence;
+    [SerializeField] string playerTag = "Player";
 
-    private bool playerInRange;
-    private Collider2D interactionArea;
+    bool playerInRange;
+    Collider2D interactionArea;
 
     private void Awake()
     {

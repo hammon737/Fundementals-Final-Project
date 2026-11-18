@@ -11,6 +11,7 @@ public class PlayerMove : MonoBehaviour
     private Animator animator;
     private Vector2 movementInput;
     private Vector2 lastMoveDirection;
+    private bool movementPaused;
 
     private void Start()
     {
@@ -19,6 +20,9 @@ public class PlayerMove : MonoBehaviour
     }
     public void OnMove(InputValue value)
     {
+        if (movementPaused)
+            return;
+
         movementInput = value.Get<Vector2>();
         if (movementInput.sqrMagnitude > 1)
         {
@@ -64,8 +68,33 @@ public class PlayerMove : MonoBehaviour
         animator.speed = movementInput.sqrMagnitude > 0 ? 1f : 0f;
     }
 
+    public void SetMovementPaused(bool paused)
+    {
+        movementPaused = paused;
+        if (!paused)
+            return;
+
+        movementInput = Vector2.zero;
+        if (rb != null)
+            rb.linearVelocity = Vector2.zero;
+        if (animator != null)
+        {
+            animator.SetBool("IsWalkingDown", false);
+            animator.SetBool("IsWalkingLeft", false);
+            animator.SetBool("IsWalkingRight", false);
+            animator.SetBool("IsWalkingUp", false);
+            animator.speed = 0f;
+        }
+    }
+
     private void FixedUpdate()
     {
+        if (movementPaused)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
+
         rb.linearVelocity = movementInput * moveSpeed;
     }
 }

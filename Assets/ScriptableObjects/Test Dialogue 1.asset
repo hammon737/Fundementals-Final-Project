@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9f282dbb6aaf4742bc03c8bcc9b102c, type: 3}
+  m_Name: Test Dialogue
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  entries:
+  - speaker: Hero
+    text: SEPHIROTH?!
+    portrait: {fileID: -6146700129834819302, guid: ac125fbc232fc4b43b6c8737b608db35, type: 3}
+  - speaker: Sephiroth
+    text: Show me your strength.
+    portrait: {fileID: 7399712131355799034, guid: f3e719531e1b70a4299a1107a195fe7f, type: 3}
+  - speaker: Sephiroth
+    text: Or return to the planet.
+    portrait: {fileID: 7399712131355799034, guid: f3e719531e1b70a4299a1107a195fe7f, type: 3}
+  - speaker: Goku
+    text: Hey, it's me. It's Goku.
+    portrait: {fileID: -6619111317931664985, guid: 66bf4a6636f6fd340a07db8832693a03, type: 3}
