@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2475771164338627760}
   - component: {fileID: 5729744852685540418}
   - component: {fileID: 8859580478107917515}
-  - component: {fileID: 6257100609712683678}
   - component: {fileID: 4266293286335763786}
   - component: {fileID: 2629427196436323585}
+  - component: {fileID: 1820087531212157798}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -140,19 +140,6 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &6257100609712683678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4690834099068387811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efd1d85064fd3154a831fc78e87570fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
-  moveSpeed: 5
 --- !u!95 &4266293286335763786
 Animator:
   serializedVersion: 7
@@ -222,7 +209,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3161485955524117438, guid: ae29b7bb5d1870e41a5707b35ce58d7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -235,3 +222,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1820087531212157798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4690834099068387811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7665d6d2201d4748bef2eeb569755ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
+  moveSpeed: 5
