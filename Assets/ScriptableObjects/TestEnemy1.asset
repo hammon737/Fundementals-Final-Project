@@ -18,5 +18,5 @@ MonoBehaviour:
   defense: 8
   experienceReward: 25
   goldReward: 10
-  artwork: {fileID: 0}
+  artwork: {fileID: -4424639891517422229, guid: d370771b3c67ee74399817ee649482a5, type: 3}
   possibleDrops: []

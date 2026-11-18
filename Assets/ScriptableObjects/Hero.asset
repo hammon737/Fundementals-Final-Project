@@ -18,7 +18,7 @@ MonoBehaviour:
   attackPower: 1500
   defensePower: 250
   portrait: {fileID: -6146700129834819302, guid: ac125fbc232fc4b43b6c8737b608db35, type: 3}
-  battleSprite: {fileID: 4735603226591280865, guid: ea14b599ee034f149833574c20df6eb2, type: 3}
+  battleSprite: {fileID: -3471435751753597758, guid: ed1bb4420310a224eb91e5d54ef52929, type: 3}
   skills:
   - {fileID: 11400000, guid: 7e24527f63558c742b3a6b52be7464b0, type: 2}
   - {fileID: 11400000, guid: 59eb83d02b749b448afb97bda9e8d106, type: 2}
