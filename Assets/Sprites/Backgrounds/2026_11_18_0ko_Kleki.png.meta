@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 312cd1eb4fe9eb64bbc98ee0bf086c65
+guid: d9ab8e1b62fdd2444b816619e006999a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5791208231838860994
-    second: PurpleBackground_0
+      213: 1019305427787627315
+    second: 2026_11_18_0ko_Kleki_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PurpleBackground_0
+      name: 2026_11_18_0ko_Kleki_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2c6c21724318e5050800000000000000
-      internalID: 5791208231838860994
+      spriteID: 33bb8e4d2ec452e00800000000000000
+      internalID: 1019305427787627315
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PurpleBackground_0: 5791208231838860994
+      2026_11_18_0ko_Kleki_0: 1019305427787627315
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
