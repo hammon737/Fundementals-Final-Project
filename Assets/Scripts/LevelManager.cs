@@ -18,6 +18,11 @@ public class LevelManager : MonoBehaviour
         StartCoroutine(WaitAndLoad("GameOver", sceneLoadDelay));
     }
 
+    public void ReturnToMain()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void LoadTitleScreen()
     {
         SceneManager.LoadScene("TitleScreen");
