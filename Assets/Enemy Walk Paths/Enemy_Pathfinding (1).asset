@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dfec91913b96a2428b77b5b5d39ba93, type: 3}
   m_Name: Enemy_Pathfinding (1)
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_Pathfinding
-  pathPrefab: {fileID: 0}
+  pathPrefab: {fileID: 5184701541132420245, guid: d530397e39ed06546bf0bc22451a47d4, type: 3}
   enemyWalkSpeed: 5
