@@ -1094,7 +1094,7 @@ public class BattleSystem : MonoBehaviour
             outline.effectDistance = new Vector2(1f, 1f);
             outline.effectColor = new Color(0.35f, 0.67f, 0.86f, 0.8f);
 
-            Vector2 spriteAnchor = new Vector2(0.55f + (i % 2) * 0.11f, 0.39f + (i / 2) * 0.16f);
+            Vector2 spriteAnchor = new Vector2(0.55f + (i % 2) * 0.11f, 0.39f + (i / 2) * 0.22f);
             Sprite battler = member != null && member.Character != null
                 ? (member.Character.BattleSprite != null ? member.Character.BattleSprite : member.Character.Portrait)
                 : null;
