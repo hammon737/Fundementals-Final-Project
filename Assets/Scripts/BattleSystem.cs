@@ -1081,6 +1081,7 @@ public class BattleSystem : MonoBehaviour
         int count = gameState.Party.Count;
         float gap = 0.012f;
         float width = count == 0 ? 0f : (1f - gap * (count - 1)) / count;
+        RectTransform statusStripRect = partyStatusRoot.GetComponent<RectTransform>();
         for (int i = 0; i < count; i++)
         {
             PartyMemberState member = gameState.Party[i];
@@ -1094,12 +1095,15 @@ public class BattleSystem : MonoBehaviour
             outline.effectDistance = new Vector2(1f, 1f);
             outline.effectColor = new Color(0.35f, 0.67f, 0.86f, 0.8f);
 
-            Vector2 spriteAnchor = new Vector2(0.55f + (i % 2) * 0.11f, 0.39f + (i / 2) * 0.22f);
+            float rowCenter = left + width * 0.5f;
+            float spriteX = Mathf.Lerp(statusStripRect.anchorMin.x, statusStripRect.anchorMax.x, rowCenter);
+            Vector2 spriteAnchor = new Vector2(spriteX, 0.34f);
             Sprite battler = member != null && member.Character != null
                 ? (member.Character.BattleSprite != null ? member.Character.BattleSprite : member.Character.Portrait)
                 : null;
             Image stageSprite;
-            RectTransform stageRoot = CreateStageSprite("Party Battler " + (i + 1), battlePanel.transform, spriteAnchor, new Vector2(150f, 210f), battler, out stageSprite);
+            RectTransform stageRoot = CreateStageSprite("Party Battler " + (i + 1), battlePanel.transform, spriteAnchor, new Vector2(130f, 182f), battler, out stageSprite);
+            stageRoot.SetSiblingIndex(partyStatusRoot.GetSiblingIndex() + 1);
 
             PartyMemberUI ui = new PartyMemberUI
             {
