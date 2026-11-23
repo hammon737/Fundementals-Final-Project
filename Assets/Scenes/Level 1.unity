@@ -69655,6 +69655,78 @@ PolygonCollider2D:
       - {x: 46.798107, y: -34.92131}
       - {x: 47.193314, y: 15.786148}
   m_UseDelaunayMesh: 1
+--- !u!1001 &1355740626
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 197600444232716350, guid: 1ac2d8ae1552a3e45a2ce36750415874, type: 3}
+      propertyPath: m_Name
+      value: Blue Tentacles
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231875696033784842, guid: 1ac2d8ae1552a3e45a2ce36750415874, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6399
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231875696033784842, guid: 1ac2d8ae1552a3e45a2ce36750415874, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6399
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231875696033784842, guid: 1ac2d8ae1552a3e45a2ce36750415874, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6399
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231875696033784842, guid: 1ac2d8ae1552a3e45a2ce36750415874, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231875696033784842, guid: 1ac2d8ae1552a3e45a2ce36750415874, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -30.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231875696033784842, guid: 1ac2d8ae1552a3e45a2ce36750415874, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231875696033784842, guid: 1ac2d8ae1552a3e45a2ce36750415874, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231875696033784842, guid: 1ac2d8ae1552a3e45a2ce36750415874, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231875696033784842, guid: 1ac2d8ae1552a3e45a2ce36750415874, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231875696033784842, guid: 1ac2d8ae1552a3e45a2ce36750415874, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231875696033784842, guid: 1ac2d8ae1552a3e45a2ce36750415874, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231875696033784842, guid: 1ac2d8ae1552a3e45a2ce36750415874, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231875696033784842, guid: 1ac2d8ae1552a3e45a2ce36750415874, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 197600444232716350, guid: 1ac2d8ae1552a3e45a2ce36750415874, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1785637068}
+  m_SourcePrefab: {fileID: 100100000, guid: 1ac2d8ae1552a3e45a2ce36750415874, type: 3}
 --- !u!1001 &1506028700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70099,6 +70171,33 @@ Transform:
   - {fileID: 17384561}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1785637065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 197600444232716350, guid: 1ac2d8ae1552a3e45a2ce36750415874, type: 3}
+  m_PrefabInstance: {fileID: 1355740626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1785637068
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785637065}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bdd22db50d4a1c9439abafda450f9c24, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1811252188 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 71653247198961258, guid: 4cbff1f50146ad84983846e8c5e90b71, type: 3}
@@ -86196,3 +86295,4 @@ SceneRoots:
   - {fileID: 1506028700}
   - {fileID: 230465878}
   - {fileID: 796676038}
+  - {fileID: 1355740626}
