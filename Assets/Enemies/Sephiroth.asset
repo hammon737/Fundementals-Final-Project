@@ -19,4 +19,7 @@ MonoBehaviour:
   experienceReward: 100000
   goldReward: 20000
   artwork: {fileID: -7649268189109072800, guid: aa1cea2de86ca0a4aa9fbbf0b136bc5b, type: 3}
-  possibleDrops: []
+  possibleDrops:
+  - {fileID: 11400000, guid: 6d80c30264804d45af06ea625c90e20a, type: 2}
+  - {fileID: 11400000, guid: cace7e4006d0405abc1832325092d8e8, type: 2}
+  - {fileID: 11400000, guid: da997f41fc4e4bb299f15387e177fc3a, type: 2}

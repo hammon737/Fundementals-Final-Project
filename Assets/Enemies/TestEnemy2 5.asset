@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb878d8f0b8aa014f996dc7bb02749fc, type: 3}
+  m_Name: TestEnemy2 5
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDefinition
+  displayName: Enemy
+  maxHP: 45
+  attack: 10
+  defense: 6
+  experienceReward: 10
+  goldReward: 7
+  artwork: {fileID: -4424639891517422229, guid: d370771b3c67ee74399817ee649482a5, type: 3}
+  possibleDrops:
+  - {fileID: 11400000, guid: 8e3a278715d322e4ba3356c6220ec8bc, type: 2}
+  - {fileID: 11400000, guid: 99213b588dfbc8145a6c0c6d62c1dc8f, type: 2}

@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b150d71335989a41acd6479095b721b, type: 3}
   m_Name: Dialogue1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
-  entries: []
+  entries:
+  - speaker: 
+    text: 
+    portrait: {fileID: 0}
