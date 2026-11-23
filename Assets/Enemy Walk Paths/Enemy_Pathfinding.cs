@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Enemy_Pathfinding", menuName = "New EnemyPathConfig")]
 public class Enemy_Pathfinding : ScriptableObject
 {
-    [SerializeField] Transform pathPrefab;
+    [SerializeField] Transform[] pathPrefab;
     [SerializeField] float enemyWalkSpeed = 5f;
 
     public Transform GetStartPoint()
