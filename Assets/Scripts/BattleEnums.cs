@@ -1,7 +1,8 @@
 public enum SkillEffect
 {
     HealParty,
-    DamageEnemy
+    DamageEnemy,
+    BoostStats
 }
 
 public enum ItemCategory
@@ -15,5 +16,7 @@ public enum ItemEffect
 {
     None,
     HealHP,
-    RestoreMP
+    RestoreMP,
+    BoostAttack,
+    BoostDefense
 }

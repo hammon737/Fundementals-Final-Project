@@ -57,6 +57,8 @@ public class BattleSystem : MonoBehaviour
     readonly List<Button> targetButtons = new List<Button>();
     readonly List<Image> targetBackgrounds = new List<Image>();
     readonly List<TextMeshProUGUI> targetIndicators = new List<TextMeshProUGUI>();
+    readonly Dictionary<PartyMemberState, int> attackStatBoosts = new Dictionary<PartyMemberState, int>();
+    readonly Dictionary<PartyMemberState, int> defenseStatBoosts = new Dictionary<PartyMemberState, int>();
     Canvas battleCanvas;
     GameObject battlePanel;
     Image roomBackgroundImage;
@@ -167,6 +169,8 @@ public class BattleSystem : MonoBehaviour
         isResolvingTurn = false;
         isTransitioning = true;
         defending = false;
+        attackStatBoosts.Clear();
+        defenseStatBoosts.Clear();
         currentMemberIndex = 0;
         actionsThisRound = 0;
         selectedActionIndex = 0;
@@ -195,7 +199,7 @@ public class BattleSystem : MonoBehaviour
         PartyMemberState attacker = GetNextLivingMember();
         if (attacker == null) return;
 
-        int damage = Mathf.Max(1, attacker.AttackPower - target.Definition.Defense);
+        int damage = Mathf.Max(1, GetEffectiveAttackPower(attacker) - target.Definition.Defense);
         target.HP = Mathf.Max(0, target.HP - damage);
         SetMessage(attacker.Character.DisplayName + " attacks " + target.Definition.DisplayName + " for " + damage + " damage.");
         RefreshUI();
@@ -220,15 +224,38 @@ public class BattleSystem : MonoBehaviour
     {
         if (!CanAct()) return;
         ItemDefinition usableItem = FindUsefulItem(out PartyMemberState target);
-        if (target == null || usableItem == null || !gameState.TryUseItem(usableItem, FindPartyMemberIndex(target)))
+        bool boostsAttack = usableItem != null && usableItem.Effect == ItemEffect.BoostAttack;
+        bool boostsDefense = usableItem != null && usableItem.Effect == ItemEffect.BoostDefense;
+        if (target == null || usableItem == null)
         {
-            SetMessage("There is no usable healing item.");
+            SetMessage("There is no usable item.");
             RefreshUI();
             return;
         }
 
+        int targetIndex = FindPartyMemberIndex(target);
+        bool itemUsed = boostsAttack || boostsDefense
+            ? gameState.TryConsumeStatBoostItem(usableItem, targetIndex)
+            : gameState.TryUseItem(usableItem, targetIndex);
+        if (!itemUsed)
+        {
+            SetMessage("There is no usable item.");
+            RefreshUI();
+            return;
+        }
+
+        if (boostsAttack)
+            AddStatBoost(attackStatBoosts, target, usableItem.EffectAmount);
+        else if (boostsDefense)
+            AddStatBoost(defenseStatBoosts, target, usableItem.EffectAmount);
+
         GetNextLivingMember();
-        SetMessage(target.Character.DisplayName + " uses " + usableItem.DisplayName + ".");
+        string message = target.Character.DisplayName + " uses " + usableItem.DisplayName + ".";
+        if (boostsAttack)
+            message = target.Character.DisplayName + " uses " + usableItem.DisplayName + " to boost ATK by " + usableItem.EffectAmount + ".";
+        else if (boostsDefense)
+            message = target.Character.DisplayName + " uses " + usableItem.DisplayName + " to boost DEF by " + usableItem.EffectAmount + ".";
+        SetMessage(message);
         CompletePartyAction();
     }
 
@@ -276,7 +303,7 @@ public class BattleSystem : MonoBehaviour
                 return;
             }
         }
-        else
+        else if (skill.Effect == SkillEffect.HealParty)
         {
             healingTarget = FindMostInjuredMember();
             if (healingTarget == null)
@@ -289,16 +316,22 @@ public class BattleSystem : MonoBehaviour
         }
         CloseSpellMenu();
         GetNextLivingMember();
-        if (damageTarget != null)
+        if (skill.Effect == SkillEffect.DamageEnemy)
         {
             damageTarget.HP = Mathf.Max(0, damageTarget.HP - skill.Power);
             SetMessage(user.Character.DisplayName + " uses " + skill.DisplayName + " for " + skill.Power + " damage.");
         }
-        else
+        else if (skill.Effect == SkillEffect.HealParty)
         {
             int restored = Mathf.Min(skill.Power, healingTarget.MaxHP - healingTarget.CurrentHP);
             healingTarget.CurrentHP += restored;
             SetMessage(user.Character.DisplayName + " uses " + skill.DisplayName + " to restore " + restored + " HP.");
+        }
+        else if (skill.Effect == SkillEffect.BoostStats)
+        {
+            AddStatBoost(attackStatBoosts, user, skill.Power);
+            AddStatBoost(defenseStatBoosts, user, skill.Power);
+            SetMessage(user.Character.DisplayName + " uses " + skill.DisplayName + " to boost ATK and DEF by " + skill.Power + ".");
         }
         user.CurrentMP -= skill.MPCost;
         RefreshUI();
@@ -343,7 +376,7 @@ public class BattleSystem : MonoBehaviour
                 yield break;
             }
 
-            int rawDamage = Mathf.Max(1, enemy.Definition.Attack - target.DefensePower);
+            int rawDamage = Mathf.Max(1, enemy.Definition.Attack - GetEffectiveDefensePower(target));
             int damage = defending ? Mathf.Max(1, rawDamage / 2) : rawDamage;
             target.CurrentHP = Mathf.Max(0, target.CurrentHP - damage);
             SetMessage(enemy.Definition.DisplayName + " hits " + target.Character.DisplayName + " for " + damage + " damage.");
@@ -498,6 +531,27 @@ public class BattleSystem : MonoBehaviour
         return result;
     }
 
+    private void AddStatBoost(Dictionary<PartyMemberState, int> boosts, PartyMemberState member, int amount)
+    {
+        if (member == null || amount <= 0) return;
+        boosts.TryGetValue(member, out int currentBoost);
+        boosts[member] = currentBoost + amount;
+    }
+
+    private int GetEffectiveAttackPower(PartyMemberState member)
+    {
+        if (member == null) return 0;
+        attackStatBoosts.TryGetValue(member, out int boost);
+        return member.AttackPower + boost;
+    }
+
+    private int GetEffectiveDefensePower(PartyMemberState member)
+    {
+        if (member == null) return 0;
+        defenseStatBoosts.TryGetValue(member, out int boost);
+        return member.DefensePower + boost;
+    }
+
     private int FindPartyMemberIndex(PartyMemberState target)
     {
         for (int i = 0; i < gameState.Party.Count; i++)
@@ -515,6 +569,14 @@ public class BattleSystem : MonoBehaviour
         {
             if (stack == null || stack.Item == null || stack.Quantity <= 0) continue;
             if (stack.Item.Category != ItemCategory.Consumable) continue;
+            if (stack.Item.Effect == ItemEffect.BoostAttack || stack.Item.Effect == ItemEffect.BoostDefense)
+            {
+                target = GetCurrentLivingMember();
+                if (target != null)
+                    return stack.Item;
+                continue;
+            }
+
             foreach (PartyMemberState member in gameState.Party)
             {
                 if (member == null || !member.IsAlive) continue;
@@ -1121,7 +1183,7 @@ public class BattleSystem : MonoBehaviour
             if (row.battleSpriteRoot != null)
                 row.battleSpriteRoot.gameObject.SetActive(true);
             row.nameText.text = member.Character.DisplayName;
-            row.statsText.text = "Lv " + member.Level + "  ATK " + member.AttackPower + "  DEF " + member.DefensePower;
+            row.statsText.text = "Lv " + member.Level + "  ATK " + GetEffectiveAttackPower(member) + "  DEF " + GetEffectiveDefensePower(member);
             row.hpText.text = "HP  " + member.CurrentHP + " / " + member.MaxHP;
             row.mpText.text = "MP  " + member.CurrentMP + " / " + member.MaxMP;
             SetGauge(row.hpFill, member.CurrentHP, member.MaxHP);

@@ -116,6 +116,20 @@ public class GameState : MonoBehaviour
         return true;
     }
 
+    public bool TryConsumeStatBoostItem(ItemDefinition item, int partyMemberIndex)
+    {
+        if (item == null || item.IsKeyItem || item.Category != ItemCategory.Consumable ||
+            (item.Effect != ItemEffect.BoostAttack && item.Effect != ItemEffect.BoostDefense) ||
+            item.EffectAmount <= 0)
+            return false;
+
+        PartyMemberState member = GetMember(partyMemberIndex);
+        if (member == null || !member.IsAlive)
+            return false;
+
+        return RemoveItem(item, 1);
+    }
+
     private bool RemoveItem(ItemDefinition item, int quantity = 1)
     {
         InventoryStack stack = FindStack(item);
