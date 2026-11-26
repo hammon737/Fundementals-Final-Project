@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5231875696033784842}
   - component: {fileID: 2413666145183385123}
-  - component: {fileID: 2587121418491995489}
+  - component: {fileID: 2919195541290604798}
   m_Layer: 0
   m_Name: Blue Tentacles
   m_TagString: Untagged
@@ -28,8 +28,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -13.37, y: -2.16, z: 0}
-  m_LocalScale: {x: 1.6399, y: 1.6399, z: 1.6399}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -93,7 +93,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
---- !u!95 &2587121418491995489
+--- !u!95 &2919195541290604798
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
