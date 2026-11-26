@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b150d71335989a41acd6479095b721b, type: 3}
+  m_Name: FirstDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  entries:
+  - speaker: Ren
+    text: We made it...
+    portrait: {fileID: 0}
+  - speaker: Kiri
+    text: This is it...? The place where he's resting?
+    portrait: {fileID: 0}
+  - speaker: Benevolent One
+    text: Mhm! The Malevolence's sleeping self is somewhere deep in this cavern.
+      We don't have much time until he wakes up...
+    portrait: {fileID: 0}
+  - speaker: Rio
+    text: Then we've gotta find this guy, and fast!
+    portrait: {fileID: 0}
+  - speaker: Ren
+    text: Right... can we get a lock on ???'s magical energy? If the Malevolence
+      is somewhere here... he could lead us right to him.
+    portrait: {fileID: 0}
+  - speaker: Maya
+    text: Nothing, as of yet. However... you are right, Ren. That man is definitely
+      here somewhere...
+    portrait: {fileID: 0}
+  - speaker: Kiri
+    text: So if we find him...
+    portrait: {fileID: 0}
+  - speaker: Maya
+    text: We find the hiding spot of the Malevolence.
+    portrait: {fileID: 0}
+  - speaker: Kiri
+    text: Finding him is gonna be easy! He's probably laid out a bunch of traps anyway...
+      we just follow those and we'll get to him in no time!
+    portrait: {fileID: 0}
+  - speaker: Ren
+    text: Right... we need to be careful, though.
+    portrait: {fileID: 0}
+  - speaker: Ren
+    text: Let's move.
+    portrait: {fileID: 0}

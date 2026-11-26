@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b150d71335989a41acd6479095b721b, type: 3}
+  m_Name: GlazerFirstEncounter
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  entries:
+  - speaker: Ren
+    text: There! It's you, ???!
+    portrait: {fileID: 0}
+  - speaker: ???
+    text: Ren... I commend you for making it to this point. Without your efforts,
+      I may have never found this place.
+    portrait: {fileID: 0}
+  - speaker: Kiri
+    text: Ren's efforts...?
+    portrait: {fileID: 0}
+  - speaker: ???
+    text: Yes.
+    portrait: {fileID: 0}
+  - speaker: ???
+    text: Ren's abilities... their proficiency, their power to evolve... the Malevolence
+      has taken a genuine interest in it...
+    portrait: {fileID: 0}
+  - speaker: ???
+    text: And thus - it subconsciously led all of you right where it wanted you.
+      Straight to where it sleeps...
+    portrait: {fileID: 0}
+  - speaker: ???
+    text: To prepare to see Ren with its own eyes, at worlds' end. And when they
+      finally intersect-
+    portrait: {fileID: 0}
+  - speaker: Ren
+    text: No way I'm going to go with that thing...
+    portrait: {fileID: 0}
+  - speaker: Ren
+    text: I'm not going to let you dictate what I do...! This is MY LIFE!
+    portrait: {fileID: 0}
+  - speaker: Ren
+    text: NOT YOURS!
+    portrait: {fileID: 0}

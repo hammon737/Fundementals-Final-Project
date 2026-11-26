@@ -10828,11 +10828,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4410195006671617297, guid: accede7e05dfd974da6a58476b60ade5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.02738285
+      value: -0.0422554
       objectReference: {fileID: 0}
     - target: {fileID: 4410195006671617297, guid: accede7e05dfd974da6a58476b60ade5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6674442
+      value: 1.6674232
       objectReference: {fileID: 0}
     - target: {fileID: 4410195006671617297, guid: accede7e05dfd974da6a58476b60ade5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -189343,6 +189343,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1301654467}
   - component: {fileID: 1301654466}
+  - component: {fileID: 1301654469}
+  - component: {fileID: 1301654468}
   m_Layer: 0
   m_Name: Glazer
   m_TagString: Untagged
@@ -189425,6 +189427,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1301654468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301654465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09fdc0a1813b5d41a89754194bd72a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  dialogueSystem: {fileID: 1671324067}
+  dialogueSequence: {fileID: 11400000, guid: 33ccb9d3bf7d53240a501f621e6045e7, type: 2}
+  playerTag: Player
+--- !u!61 &1301654469
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301654465}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.051172823, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.38, y: 0.66}
+    newSize: {x: 0.38, y: 0.66}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.48234564, y: 0.66}
+  m_EdgeRadius: 0
 --- !u!1001 &1326814576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -189642,7 +189705,7 @@ Transform:
   m_GameObject: {fileID: 1541444108}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.317383, y: 27.932556, z: -10}
+  m_LocalPosition: {x: 11.332255, y: 27.932577, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -189787,6 +189850,58 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17ae29d3b71900e43b6a14646630bc09, type: 3}
+--- !u!1 &1671324066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1671324068}
+  - component: {fileID: 1671324067}
+  m_Layer: 0
+  m_Name: DialogueSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1671324067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671324066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbaa34d4a77bb514f89e20876e9c3f92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem
+  canvas: {fileID: 0}
+  speakerText: {fileID: 0}
+  dialogueText: {fileID: 0}
+  advanceArrow: {fileID: 0}
+  charactersPerSecond: 45
+  dialogueFont: {fileID: 0}
+  placeholderPortrait: {fileID: 0}
+  characterPortrait: {fileID: 0}
+--- !u!4 &1671324068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671324066}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1675672911
 GameObject:
   m_ObjectHideFlags: 0
@@ -191256,6 +191371,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5729744852685540418, guid: 4cbff1f50146ad84983846e8c5e90b71, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -191347,3 +191466,4 @@ SceneRoots:
   - {fileID: 141363615}
   - {fileID: 1691455477}
   - {fileID: 1301654467}
+  - {fileID: 1671324068}

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b150d71335989a41acd6479095b721b, type: 3}
+  m_Name: FinalGlazerDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  entries:
+  - speaker: ???
+    text: What...? How did the lot of you make it this far?
+    portrait: {fileID: 0}
+  - speaker: Ren
+    text: We followed your magical power... why wouldn't we, when everything is on
+      the line?
+    portrait: {fileID: 0}
+  - speaker: Maya
+    text: 'We must destroy the Malevolence here and now. And you shall not get in
+      our way, ???. '
+    portrait: {fileID: 0}
+  - speaker: ???
+    text: I had a feeling that this would happen.
+    portrait: {fileID: 0}
+  - speaker: ???
+    text: The four of you have been guided here by the damned fool that calls himself
+      a god. Walking along his path of so-called virtue, you aim to destroy the Malevolence
+      and allow your world to fall to ruin. That... I cannot let happen. He MUST
+      rise again... no matter the cost.
+    portrait: {fileID: 0}
+  - speaker: Kiri
+    text: You'd give away your life for the end of the world?!
+    portrait: {fileID: 0}
+  - speaker: ???
+    text: You do not know the pain that this accursed world has granted me. You are
+      all but mere children... there is nothing that you could possibly understand!
+    portrait: {fileID: 0}
+  - speaker: Ren
+    text: Even so...
+    portrait: {fileID: 0}
+  - speaker: Ren
+    text: We love our home... and it isn't your right to put your grubby little hands
+      on it!
+    portrait: {fileID: 0}
+  - speaker: ???
+    text: Then, TRY ME!
+    portrait: {fileID: 0}
+  - speaker: ???
+    text: TRY ME, BOY! TRY TO OVERCOME THAT WHICH LIES BEYOND YOUR FEEBLE UNDERSTANDING!
+    portrait: {fileID: 0}

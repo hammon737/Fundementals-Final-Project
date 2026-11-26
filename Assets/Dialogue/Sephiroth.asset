@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b150d71335989a41acd6479095b721b, type: 3}
+  m_Name: Sephiroth
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSequence
+  entries:
+  - speaker: Ren
+    text: Where- where is this...?
+    portrait: {fileID: 0}
+  - speaker: Benevolent One
+    text: H-Hey... all four of you need to get out of there, NOW!
+    portrait: {fileID: 0}
+  - speaker: Rio
+    text: What're you on about, man?! Why're you so scared all of a sudden?! Ain't
+      you a god?!
+    portrait: {fileID: 0}
+  - speaker: Benevolent One
+    text: S-Seriously...! ALL OF YOU NEED TO GO, RIGHT N-
+    portrait: {fileID: 0}
+  - speaker: Sephiroth
+    text: So I was correct. This is not the world that I originate from. Not in the
+      slightest.
+    portrait: {fileID: 0}
+  - speaker: Maya
+    text: Urk- Wh-Who is that...?! Their magic... it's so oppressive, I'm struggling
+      to stand...!
+    portrait: {fileID: 0}
+  - speaker: Benevolent One
+    text: He found us... damn it all. All of you need to stand ready for battle,
+      right now.
+    portrait: {fileID: 0}
+  - speaker: Kiri
+    text: W-Who is he?!
+    portrait: {fileID: 0}
+  - speaker: Ren
+    text: He feels... so much different from anyone else we've managed to defeat
+      thus far. He's- a whole different type of beast.
+    portrait: {fileID: 0}
+  - speaker: Benevolent One
+    text: In a world where memories flow as would a river... he took form.
+    portrait: {fileID: 0}
+  - speaker: Benevolent One
+    text: First as a war hero, then as the personification of despair itself.
+    portrait: {fileID: 0}
+  - speaker: Benevolent One
+    text: ...His name is Sephiroth.
+    portrait: {fileID: 0}
+  - speaker: Sephiroth
+    text: ...Your awareness of me is flattering.
+    portrait: {fileID: 0}
+  - speaker: Sephiroth
+    text: Show me your strength, all of you...
+    portrait: {fileID: 0}
+  - speaker: Sephiroth
+    text: If you wish to see your journey, your battle for your right to exist, to
+      its completion...
+    portrait: {fileID: 0}
+  - speaker: Sephiroth
+    text: Then strike me down where I stand.
+    portrait: {fileID: 0}
