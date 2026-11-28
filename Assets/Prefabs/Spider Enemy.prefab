@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7484288089825408354}
   - component: {fileID: 7436148743949770052}
   - component: {fileID: 1569784465462517475}
+  - component: {fileID: 1956704946556556870}
   m_Layer: 6
   m_Name: Spider Enemy
   m_TagString: Untagged
@@ -106,3 +107,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pathfinding
   enemyPath: {fileID: 11400000, guid: ac92c9bb540b3d349b79df55244caa28, type: 2}
+  enanimator: {fileID: 0}
+--- !u!95 &1956704946556556870
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5549149929930895006}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 61f9ac3f0d2fd564dabf054e9cf6af88, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
