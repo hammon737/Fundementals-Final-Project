@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: EnemyPath (2)
   m_EditorClassIdentifier: Assembly-CSharp::EnemyPathSO
   pathPrefab: {fileID: 5553405079029541517, guid: deb2001dab02475428d214d8a02d0928, type: 3}
-  enemyMoveSpeed: 4
+  enemyMoveSpeed: 2

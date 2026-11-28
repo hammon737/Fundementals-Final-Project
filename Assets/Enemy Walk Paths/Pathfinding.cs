@@ -5,24 +5,24 @@ public class Pathfinding : MonoBehaviour
     [SerializeField] EnemyPathSO enemyPath;
     Transform[] waypoints;
     int waypointIndex = 0;
-    private Animator enanimator;
+    public Animator animator;
     private Vector3 currentPos;
 
     private void Start()
     {
         waypoints = enemyPath.GetWaypoints();
         transform.position = enemyPath.GetStartingWaypoint().position;
-        enanimator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         currentPos = transform.position;
     }
 
-    private void Update()
+    void Update()
     {
         FollowPath();
         UpdateAnimation();
     }
 
-    public void FollowPath()
+    void FollowPath()
     {
         if (waypointIndex < waypoints.Length)
         {
@@ -42,49 +42,50 @@ public class Pathfinding : MonoBehaviour
 
     }
 
-    public void UpdateAnimation()
+    void UpdateAnimation()
     {
         Vector3 movement = transform.position - currentPos;
 
-        if (Mathf.Abs(movement.x) == Mathf.Abs(movement.z))
+        if (Mathf.Abs(movement.x) == Mathf.Abs(movement.y))
         {
             return;
         }
-        else if (Mathf.Abs(movement.x) > Mathf.Abs(movement.z))
+        else if (Mathf.Abs(movement.x) < Mathf.Abs(movement.y))
+        {
+            if (movement.y > 0)
+            {
+                animator.SetBool("IsForward", false);
+                animator.SetBool("IsLeft", false);
+                animator.SetBool("IsRight", false);
+                animator.SetBool("IsBack", true);
+            }
+            else
+            {
+                animator.SetBool("IsBack", false);
+                animator.SetBool("IsLeft", false);
+                animator.SetBool("IsRight", false);
+                animator.SetBool("IsForward", true);
+            }
+        }
+        else if (Mathf.Abs(movement.x) > Mathf.Abs(movement.y))
         {
             if (movement.x > 0)
             {
-                enanimator.SetBool("IsRight", true);
-                enanimator.SetBool("IsLeft", false);
-                enanimator.SetBool("IsForward", false);
-                enanimator.SetBool("IsBack", false);
+                animator.SetBool("IsRight", true);
+                animator.SetBool("IsLeft", false);
+                animator.SetBool("IsForward", false);
+                animator.SetBool("IsBack", false);
             }
             else
             {
-                enanimator.SetBool("IsLeft", true);
-                enanimator.SetBool("IsRight", false);
-                enanimator.SetBool("IsForward", false);
-                enanimator.SetBool("IsBack", false);
+                animator.SetBool("IsLeft", true);
+                animator.SetBool("IsRight", false);
+                animator.SetBool("IsForward", false);
+                animator.SetBool("IsBack", false);
             }
 
         }
-        else if (Mathf.Abs(movement.x) < Mathf.Abs(movement.z))
-        {
-            if (movement.z > 0)
-            {
-                enanimator.SetBool("IsForward", false);
-                enanimator.SetBool("IsLeft", false);
-                enanimator.SetBool("IsRight", false);
-                enanimator.SetBool("IsBack", true);
-            }
-            else
-            {
-                enanimator.SetBool("IsBack", false);
-                enanimator.SetBool("IsLeft", false);
-                enanimator.SetBool("IsRight", false);
-                enanimator.SetBool("IsForward", true);
-            }
-        }
+        
 
         currentPos = transform.position;
     }
